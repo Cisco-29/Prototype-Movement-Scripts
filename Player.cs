@@ -1,4 +1,4 @@
-﻿using System.Collections; using System.Collections.Generic; using UnityEngine;  public class Player : Character
+﻿using System.Collections; using System.Collections.Generic; using UnityEngine;  public class Player : MonoBehaviour
 {
     float speed = 4.0f;
     Vector3 location;    // Vector3 is named 'location'
