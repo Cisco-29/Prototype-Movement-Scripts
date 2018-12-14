@@ -29,7 +29,6 @@ public class TileMovementController : MonoBehaviour {
         if (moveToPoint)
         {
             transform.position = Vector3.MoveTowards(transform.position, endPosition, moveSpeed * Time.deltaTime);
-            moveToPoint = false;
         }
     }
     void Update() // Input and Logic
