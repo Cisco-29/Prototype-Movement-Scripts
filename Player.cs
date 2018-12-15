@@ -20,11 +20,11 @@
 
 
 
-        if (Input.GetKeyDown(KeyCode.UpArrow)) // ADD IN A CLAUSE THAT ALLOWS IT TO RE ACTIVATE. Might need to go in the if's below         {             lk = (int)LastKey.Up;
+        if (Input.GetKeyDown(KeyCode.UpArrow))          {             lk = (int)LastKey.Up;
 
-            if (Input.GetKeyUp(KeyCode.DownArrow))  { lk = 0; }
-            if (Input.GetKeyUp(KeyCode.LeftArrow))  { lk = 0; }
-            if (Input.GetKeyUp(KeyCode.RightArrow)) { lk = 0; }         }          if (Input.GetKeyDown(KeyCode.DownArrow))         {             lk = (int)LastKey.Down;
+            if (Input.GetKey(KeyCode.UpArrow) && Input.GetKeyUp(KeyCode.DownArrow)) { lk = 0; }
+            if (Input.GetKey(KeyCode.UpArrow) && Input.GetKeyUp(KeyCode.LeftArrow))  { lk = 0; }
+            if (Input.GetKey(KeyCode.UpArrow) && Input.GetKeyUp(KeyCode.RightArrow)) { lk = 0; }         }          if (Input.GetKeyDown(KeyCode.DownArrow))         {             lk = (int)LastKey.Down;
 
             if (Input.GetKeyUp(KeyCode.DownArrow)) { lk = currentmove; }         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))         {             lk = (int)LastKey.Left;
